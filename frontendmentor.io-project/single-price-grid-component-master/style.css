@@ -1,0 +1,206 @@
+:root {
+  /* Primary */
+  --clr-primary-300: hsl(179, 62%, 43%);
+  --clr-primary-400: hsl(179, 62%, 50%);
+  --clr-primary-500: hsl(71, 73%, 54%);
+
+  --clr-neutral-100: hsl(0, 0%, 96%);
+  --clr-neutral-200: hsl(204, 43%, 93%);
+  --clr-neutral-300: hsl(218, 22%, 67%);
+
+  --ff-base: "Karla", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --border-small: 0.3rem;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* general styling */
+body {
+  font-size: 0.875rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-300);
+  background-color: var(--clr-neutral-200);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  max-width: 650px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+article {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bg-light {
+  background-color: var(--clr-neutral-100);
+}
+.bg-cyan {
+  background-color: var(--clr-primary-300);
+}
+.bg-light-cyan {
+  background-color: var(--clr-primary-400);
+}
+
+.clr-white {
+  color: var(--clr-neutral-200);
+}
+
+.clr-cyan {
+  color: var(--clr-primary-500);
+}
+
+.monthly-sub__title,
+.why-us__title {
+  font-size: 1.0625rem;
+}
+
+button {
+  border: none;
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-100);
+  padding: 0.7rem;
+  font-weight: var(--fw-bold);
+  border-radius: var(--border-small);
+}
+
+/* join community */
+.join-community {
+  border-top-right-radius: var(--border-small);
+  border-top-left-radius: var(--border-small);
+}
+
+.join-community__title {
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-bold);
+}
+
+.join-community__secondary-title {
+  color: var(--clr-primary-500);
+  font-weight: var(--fw-bold);
+}
+
+/* Monthly sub */
+.monthly-sub__price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.monthly-sub__price {
+  font-size: 2rem;
+}
+
+.monthly-sub__month {
+  color: var(--clr-neutral-200);
+  opacity: 0.6;
+}
+
+/* why-us */
+.why-us {
+  border-bottom-left-radius: var(--border-small);
+  border-bottom-right-radius: var(--border-small);
+}
+
+@media (min-width: 31.5em) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article {
+    padding: 2.5rem;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+  .join-community {
+    grid-column: 1/-1;
+  }
+
+  .monthly-sub {
+    border-bottom-left-radius: var(--border-small);
+  }
+
+  .why-us {
+    border-bottom-left-radius: 0px;
+  }
+}
